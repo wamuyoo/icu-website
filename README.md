@@ -3,7 +3,7 @@
 **IWD DL 2026**
 **Group members** 
 
-- James Luwo
+- James Luwō
 - Fears Sinkalu
 - Kasanga Davy
 - Abraham Nyirongo
@@ -37,8 +37,8 @@ Assignment/
 │   ├── favicon.ico     # Official ICU favicon
 │   ├── favicon.svg     # Official ICU SVG logo (used in navbar & footer)
 │   ├── apple-touch-icon.png
-│   ├── slide1.webp     # Hero background (official campus photo)
-│   ├── slide2–4.webp   # Additional campus images
+│   ├── images/students icu.png     # Hero background (official campus photo)
+│   ├── images/students icu.png   # Additional campus images
 │   ├── girl-standing.webp  # About section portrait
 │   ├── news1.webp      # ICU artisanal mining certification news
 │   ├── news2.webp      # ICU gold identification training news

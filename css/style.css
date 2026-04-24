@@ -394,7 +394,7 @@ img {
 .hero {
     min-height: 100vh;
     background: linear-gradient(160deg, rgba(13,27,62,0.93) 0%, rgba(27,79,155,0.82) 100%),
-                url('../images/slide1.webp');
+                url('../images/students\ icu.png');
     background-size: cover;
     background-position: center top;
     display: flex;

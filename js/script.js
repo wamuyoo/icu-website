@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var phrases = [
             'Delivering An ICT Enabled Education With Excellence',
             'Shaping Minds. Transforming Lives.',
-            'Zambia\'s Premier ICT University — Est. 2009',
+            'Zambia\'s Premier ICT University — Est. 1997',
             'Education That Inspires Invention, Not Just Usage'
         ];
 
