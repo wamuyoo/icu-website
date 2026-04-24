@@ -1316,7 +1316,12 @@
         </div>
     </footer>
 
-    <!-- CHAT PANEL -->
+   <!-- CHAT BUTTON (collapsed state) -->
+<div id="chatToggle" onclick="openChat()">
+    <i class="fas fa-comments"></i>
+</div>
+
+<!-- CHAT PANEL -->
 <div id="chatPanel" class="hidden">
     
     <div class="chat-header">
@@ -1331,7 +1336,6 @@
         <button onclick="sendMessage()">Send</button>
     </div>
 </div>
-
 
     <!-- Back-to-Top -->
     <button id="backToTop" aria-label="Scroll back to top">
