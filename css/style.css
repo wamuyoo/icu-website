@@ -394,7 +394,7 @@ img {
 .hero {
     min-height: 100vh;
     background: linear-gradient(160deg, rgba(13,27,62,0.93) 0%, rgba(27,79,155,0.82) 100%),
-                url('../images/students\ icu.png');
+                url('../images/slide1.webp');
     background-size: cover;
     background-position: center top;
     display: flex;
@@ -2291,4 +2291,101 @@ body.dark-mode .accolade-badge {
     body { color: #000; background: #fff; }
     .hero { min-height: auto; padding: 40px 0; }
     .section-padding { padding: 32px 0; }
+}/* CHAT TOGGLE BUTTON (LEFT SIDE) */
+
+
+/* CHAT BOT  */
+#chatToggle {
+    position: fixed;
+    left: 20px;
+    bottom: 30px;
+    width: 55px;
+    height: 55px;
+    background: #1b4f9b;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* CHAT PANEL */
+#chatPanel {
+    position: fixed;
+    left: 20px;
+    bottom: 40px;
+    width: 320px;
+    height: 420px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 9999;
+
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 0.3s ease;
+}
+
+/* SHOW CHAT */
+#chatPanel.show {
+    transform: scale(1);
+}
+
+/* HIDE CHAT */
+.hidden {
+    display: none;
+}
+
+/* HEADER */
+.chat-header {
+    background: #1b4f9b;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* CHAT BOX */
+#chatBox {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 14px;
+}
+
+/* INPUT AREA */
+.chat-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.chat-input button {
+    background: #1b4f9b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* CLOSE BUTTON */
+.chat-header button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
 }

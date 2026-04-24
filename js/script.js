@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var phrases = [
             'Delivering An ICT Enabled Education With Excellence',
             'Shaping Minds. Transforming Lives.',
-            'Zambia\'s Premier ICT University — Est. 1997',
+            'Zambia\'s Premier ICT University — Est. 2009',
             'Education That Inspires Invention, Not Just Usage'
         ];
 
@@ -531,3 +531,76 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('%c HTML  •  CSS  •  JavaScript  •  Bootstrap 5 ', 'color:#00A651;font-size:11px;');
 
 }); /* end DOMContentLoaded */
+
+function openChat() {
+    document.getElementById("chatPanel").classList.add("show");
+    document.getElementById("chatPanel").classList.remove("hidden");
+    document.getElementById("chatToggle").style.display = "none";
+}
+
+function closeChat() {
+    const panel = document.getElementById("chatPanel");
+
+    panel.classList.remove("show");
+
+    setTimeout(() => {
+        panel.classList.add("hidden");
+        document.getElementById("chatToggle").style.display = "flex";
+    }, 200);
+}
+
+function sendMessage() {
+    const input = document.getElementById("userInput");
+    const chatBox = document.getElementById("chatBox");
+
+    const message = input.value.trim().toLowerCase();
+    if (!message) return;
+
+    chatBox.innerHTML += `<div class="msg user">You: ${message}</div>`;
+    input.value = "";
+
+    let reply = getICUResponse(message);
+
+    setTimeout(() => {
+        chatBox.innerHTML += `<div class="msg bot">ICU Assistant: ${reply}</div>`;
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }, 600);
+}
+
+function getICUResponse(msg) {
+
+    // GREETING
+    if (msg.includes("hi") || msg.includes("hello")) {
+        return "Hello 👋 Welcome to ICU Zambia Admissions Assistant. How can I help you today?";
+    }
+
+    // ADMISSIONS
+    if (msg.includes("admission") || msg.includes("apply")) {
+        return "To apply at ICU Zambia:\n1. Have Grade 12 Certificate\n2. Minimum 5 credits including Math & English\n3. Apply online or visit campus\nAdmissions are open for January, May, and September intakes.";
+    }
+
+    // FEES
+    if (msg.includes("fee") || msg.includes("tuition")) {
+        return "ICU Zambia tuition is approximately K8,500 per semester depending on the program. Payment plans are available.";
+    }
+
+    // PROGRAMS
+    if (msg.includes("program") || msg.includes("courses")) {
+        return "ICU offers:\n- ICT & Software Engineering\n- Network Technology\n- Cyber Security\n- Business & MBA\n- Education\n- Engineering";
+    }
+
+    // REQUIREMENTS
+    if (msg.includes("requirement")) {
+        return "Requirements:\n- Grade 12 Certificate\n- 5 credits minimum\n- Credit in Mathematics\n- Credit in English";
+    }
+
+    // LOCATION
+    if (msg.includes("location") || msg.includes("where")) {
+        return "ICU Zambia is located off Shantumbu Road, Kafue, Zambia.";
+    }
+
+    // DEFAULT
+    return "Sorry, I don’t fully understand. Please ask about admissions, programs, fees, or requirements.";
+}
+
+
