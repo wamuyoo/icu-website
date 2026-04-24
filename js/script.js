@@ -532,6 +532,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 }); /* end DOMContentLoaded */
 
+
+
 function openChat() {
     document.getElementById("chatPanel").classList.add("show");
     document.getElementById("chatPanel").classList.remove("hidden");
@@ -565,8 +567,7 @@ function sendMessage() {
         chatBox.innerHTML += `<div class="msg bot">ICU Assistant: ${reply}</div>`;
         chatBox.scrollTop = chatBox.scrollHeight;
     }, 600);
-}
-
+} 
 
 
 function getICUResponse(msg) {
@@ -604,5 +605,7 @@ function getICUResponse(msg) {
     // DEFAULT
     return "Sorry, I don’t fully understand. Please ask about admissions, programs, fees, or requirements.";
 }
+
+
 
 
