@@ -4655,6 +4655,7 @@ body.dark-mode .accolade-badge {
     padding: 10px;
     overflow-y: auto;
     font-size: 14px;
+   color: black;
 }
 
 /* INPUT AREA */
